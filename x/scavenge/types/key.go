@@ -10,6 +10,9 @@ const (
 	// RouterKey to be used for routing msgs
 	RouterKey = ModuleName
 
-	// QuerierRoute to be used for querierer msgs
+	// QuerierRoute to be used for queriers
 	QuerierRoute = ModuleName
+
+	ScavengePrefix = "sk-"
+	CommitPrefix   = "ck-"
 )

@@ -6,14 +6,12 @@ import (
 )
 
 const (
-	// TODO: define constants that you would like exposed from your module
-
 	ModuleName        = types.ModuleName
 	RouterKey         = types.RouterKey
 	StoreKey          = types.StoreKey
 	DefaultParamspace = types.DefaultParamspace
-	QueryParams       = types.QueryParams
-	QuerierRoute      = types.QuerierRoute
+	// QueryParams       = types.QueryParams
+	QuerierRoute = types.QuerierRoute
 )
 
 var (
@@ -24,17 +22,18 @@ var (
 	NewGenesisState     = types.NewGenesisState
 	DefaultGenesisState = types.DefaultGenesisState
 	ValidateGenesis     = types.ValidateGenesis
-	// TODO: Fill out function aliases
-
 	// variable aliases
-	ModuleCdc     = types.ModuleCdc
-	// TODO: Fill out variable aliases
+	ModuleCdc            = types.ModuleCdc
+	NewMsgCreateScavenge = types.NewMsgCreateScavenge
+	NewMsgCommitSolution = types.NewMsgCommitSolution
+	NewMsgRevealSolution = types.NewMsgRevealSolution
 )
 
 type (
-	Keeper       = keeper.Keeper
-	GenesisState = types.GenesisState
-	Params       = types.Params
-
-	// TODO: Fill out module types
+	Keeper            = keeper.Keeper
+	GenesisState      = types.GenesisState
+	Params            = types.Params
+	MsgCreateScavenge = types.MsgCreateScavenge
+	MsgCommitSolution = types.MsgCommitSolution
+	MsgRevealSolution = types.MsgRevealSolution
 )

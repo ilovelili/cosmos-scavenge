@@ -1,22 +1,18 @@
 package types
 
+import "strings"
 
 // Query endpoints supported by the scavenge querier
 const (
-	// TODO: Describe query parameters, update <action> with your query
-	// Query<Action>    = "<action>"
+	QueryListScavenges = "list"
+	QueryGetScavenge   = "get"
+	QueryCommit        = "commit"
 )
 
-/* 
-Below you will be able how to set your own queries:
-
-
-// QueryResList Queries Result Payload for a query
-type QueryResList []string
+// QueryResScavenges Queries Result Payload for a names query
+type QueryResScavenges []string
 
 // implement fmt.Stringer
-func (n QueryResList) String() string {
+func (n QueryResScavenges) String() string {
 	return strings.Join(n[:], "\n")
 }
-
-*/

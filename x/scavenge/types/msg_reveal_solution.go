@@ -22,11 +22,11 @@ type MsgRevealSolution struct {
 }
 
 // NewMsgRevealSolution constructor
-func NewMsgRevealSolution(scavenger sdk.AccAddress, solution string) *MsgRevealSolution {
+func NewMsgRevealSolution(scavenger sdk.AccAddress, solution string) MsgRevealSolution {
 	// important
 	solutionHash := sha256.Sum256([]byte(solution))
 	solutionHashString := hex.EncodeToString(solutionHash[:])
-	return &MsgRevealSolution{
+	return MsgRevealSolution{
 		Scavenger:    scavenger,
 		SolutionHash: solutionHashString,
 		Solution:     solution,

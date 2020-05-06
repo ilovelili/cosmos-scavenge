@@ -19,8 +19,8 @@ type MsgCreateScavenge struct {
 }
 
 // NewMsgCreateScavenge constructor
-func NewMsgCreateScavenge(creator sdk.AccAddress, description string, solutionHash string, reward sdk.Coins) *MsgCreateScavenge {
-	return &MsgCreateScavenge{
+func NewMsgCreateScavenge(creator sdk.AccAddress, description string, solutionHash string, reward sdk.Coins) MsgCreateScavenge {
+	return MsgCreateScavenge{
 		Creator:      creator,
 		Description:  description,
 		SolutionHash: solutionHash,
